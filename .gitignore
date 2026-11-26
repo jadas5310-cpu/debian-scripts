@@ -2,3 +2,6 @@ logs/
 __pycache__/
 *.tmp
 klog_filter
+.hash_baseline.json >> .gitignore
+echo .hash_baseline.json
+.hash_baseline.json
