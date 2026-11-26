@@ -7,7 +7,9 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 REPORT_FILE="$LOG_DIR/kernel_report_$TIMESTAMP.txt"
 TMP_FILE=$(mktemp)
 
+
 # Cleanup function triggered automatically on script exit (EXIT) or Ctrl+C (INT/TERM)
+# shellcheck disable=SC2317
 cleanup() {
     rm -f "$TMP_FILE"
 }
@@ -48,4 +50,5 @@ else
 
     exit 0
 fi
+
 
