@@ -9,7 +9,7 @@ TMP_FILE=$(mktemp)
 
 
 # Cleanup function triggered automatically on script exit (EXIT) or Ctrl+C (INT/TERM)
-# shellcheck disable=SC2317
+# shellcheck disable=SC2329
 cleanup() {
     rm -f "$TMP_FILE"
 }
