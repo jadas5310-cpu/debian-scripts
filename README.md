@@ -25,6 +25,7 @@ pipx install .
 * **`sysinfo.sh`** — Quick host, kernel version, and uptime summary.
 * **`klog_check.sh`** — Daily kernel error scanner with 30-day log rotation and desktop notifications (`notify-send`).
 * **`klog_watch.sh`** — Real-time kernel log keyword filter.
+* **`log_tally.lua`**— Lightweight Lua 5.4 stream processor that tallies kernel keyword occurrences from standard input.
 
 ## Python Monitoring & Security Utilities
 
@@ -54,5 +55,8 @@ secret_box.py unlock secret.txt.vault
 # Run the unified security audit
 security_report.py
 ```
+# Tally recent kernel log keywords with Lua
+journalctl -k -n 200 --no-pager | log_tally.lua
+
 
 
