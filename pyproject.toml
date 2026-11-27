@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linux-klog-security-suite"
+version = "0.1.0"
+description = "Cross-distro Linux kernel log monitoring, SQLite event storage, and file integrity tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography",
+    "argon2-cffi",
+]
+
+[project.scripts]
+kquery = "kquery:main"
+klog-db = "klog_db:main"
+hash-guard = "hash_guard:main"
+secret-box = "secret_box:main"
+security-report = "security_report:main"
+
